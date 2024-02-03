@@ -126,3 +126,100 @@ p{
 #newQuoteBtn:hover{
     background: rgba(34, 109, 221,0.9)
 }
+
+/* notification styling
+------------------------- */
+/* #0ABF30 */
+.notification{
+    position: fixed;
+    top: 30px;
+    right: 20px;
+}
+
+.notification :where(.toast, .column){
+    display: flex;
+    align-items: center;
+}
+
+.notification .toast{
+    width: 400px;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    border-radius: 4px;
+    padding: 16px 17px;
+    margin-bottom: 10px;
+    background: #FFFFFF;
+    justify-content: space-between;
+    animation: show_toast 0.3s ease forwards;
+}
+
+@keyframes show_toast {
+    0% {
+      transform: translateX(100%);
+    }
+    40% {
+      transform: translateX(-5%);
+    }
+    80% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-10px);
+    }
+  }
+
+  .notifications .toast.hide {
+    animation: hide_toast 0.3s ease forwards;
+  }
+
+  @keyframes hide_toast {
+    0% {
+      transform: translateX(-10px);
+    }
+    40% {
+      transform: translateX(0%);
+    }
+    80% {
+      transform: translateX(-5%);
+    }
+    100% {
+      transform: translateX(calc(100% + 20px));
+    }
+  }
+
+.notification .toast::before{
+    position: absolute;
+    content: '';
+    height: 5px;
+    width: 50%;
+    background: #0ABF30;
+    bottom: 0px;
+    left: 0px;
+    animation: progress 5s linear forwards;
+}
+@keyframes progress {
+  100% {
+    width: 0%;
+  }
+}
+
+
+.column i{
+   font-size: 1.75rem;
+   color: #0ABF30;
+}
+
+.column span{
+    font-size: 1.07rem;
+    margin-left: 12px;
+}
+
+.notification .toast i:last-child{
+    color: #aeb0d7;
+    font-size: 1.5rem;
+}
+
+.notification .toast i:last-child:hover{
+    color:black;
+}
