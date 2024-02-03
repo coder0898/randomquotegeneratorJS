@@ -19,9 +19,6 @@ const QuoteGeneration = async(api)=>{
     authorInput.innerText = data.author;
 }  
 
-// const convertTextToSound = ()=>{
-//     let utternce = new SpeechSynthesisUtterance(`${quoteInput.innerText} by ${}`)
-// }
 
 QuoteGeneration(api_url);
 
@@ -32,5 +29,9 @@ newQuoteBtn.addEventListener('click',()=>{
 })
 
 textToSound.addEventListener('click', ()=>{
-    convertTextToSound();
+
+        // the SpeechSynthesisUtterance is a web speech api that reperesent a speech request
+        let utternce = new SpeechSynthesisUtterance(`${quoteInput.innerText} by ${authorInput.innerText}`);
+    
+        speechSynthesis.speak(utternce); //speak method of SpeechSynthesis speaks the utternce.
 })
