@@ -5,6 +5,7 @@ const authorInput = document.getElementById('authorInput');
 
 const newQuoteBtn = document.getElementById('newQuoteBtn');
 const textToSound = document.getElementById('textToSound'); 
+const copyQuote = document.getElementById('copyQuote');
 
 // event Handler
 
@@ -28,6 +29,7 @@ newQuoteBtn.addEventListener('click',()=>{
     QuoteGeneration(api_url);
 })
 
+
 textToSound.addEventListener('click', ()=>{
 
         // the SpeechSynthesisUtterance is a web speech api that reperesent a speech request
@@ -35,3 +37,10 @@ textToSound.addEventListener('click', ()=>{
     
         speechSynthesis.speak(utternce); //speak method of SpeechSynthesis speaks the utternce.
 })
+
+// to copy quote
+copyQuote.addEventListener('click',()=>{
+    // writeText() property writes the sepcified text string to clipboard. 
+    navigator.clipboard.writeText(quoteInput.innerText);
+    alert('Quote is copied');
+});
