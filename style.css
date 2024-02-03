@@ -1,21 +1,128 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
     display: grid;
     place-items: center;
     height: 100vh;
     background-color: rgb(34, 109, 221);
 }
 
-section{
-    width: 35rem;
+section {
+    width: 45rem;
     background-color: #FFFFFF;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 3px rgb(0, 0, 0, 0.1);
+}
+
+.head{
+    padding: 10px;
+    text-align: center;
+}
+
+h1{
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+.content{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+.content div{
+    display: flex;
+    justify-content: center;
+}
+
+.content div i{
+   font-size: 1.5rem;
+}
+
+.content div span:first-child{
+    margin: 3px 10px 0 0 ;
+}
+
+.content div span:last-child{
+    display: flex;
+    align-items:flex-end;
+    margin: 0 0 3px 10px;
+}
+
+p{
+    font-size: 2rem;
+    text-align: center;
+    word-break: break-all;
+}
+
+.content .author-box{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    font-size: 1.4rem;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.content .author-box span{
+    margin:  -7px 5px 0 0;
+    font-family: monospace;
+}
+
+.footer{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer .feature{
+    display: flex;
+    justify-content: space-evenly;
+    width: 25%;
+}
+
+.feature button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid rgb(34, 109, 221);
+    background: transparent;
+    color: rgb(34, 109, 221);
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.feature button:hover{
+    background: rgb(34, 109, 221);
+    color: #FFFFFF;
+}
+
+#newQuoteBtn{
+    width: 180px;
+    height: 50px;
+    font-size: 1.5rem;
+    background: rgb(34, 109, 221);
+    border: 0;
+    outline: 0;
+    font-weight: 700;
+    color: #FFFF;
+    border-radius: 1.5rem;
+    cursor: pointer;
+}
+
+#newQuoteBtn:hover{
+    background: rgba(34, 109, 221,0.9)
 }
